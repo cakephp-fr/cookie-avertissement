@@ -1,5 +1,5 @@
 {
-    "name": "cyberbobjr/CookieAvertissement",
+    "name": "cakephp-fr/cookie-avertissement",
     "description": "CookieAvertissement plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
