@@ -6,7 +6,7 @@ use CookieWarning\Routing\Filter\CookieWarningFilter;
 use CookieWarning\Validation\ConfigValidator;
 use Cake\Core\Configure\Engine\PhpConfig;
 
-Configure::config('default', new PhpConfig(dirname(APP) . DS . 'config' . DS));
+Configure::config('default', new PhpConfig(CONFIG));
 Configure::load('cookie_warning', 'default', false);
 
 // Validate the Configure Data
