@@ -17,5 +17,5 @@ if (!empty($errors)) {
     throw new \Exception(__d('cookie_warning', 'Délai d\'expiration du cookie incorrect'));
 }
 
-$filter = new CookieWarningFilter();
-DispatcherFactory::add($filter, ['priority' => 9999]);
+$filter = new CookieWarningFilter(['priority' => 9999, 'for' => '/']);
+DispatcherFactory::add($filter);
