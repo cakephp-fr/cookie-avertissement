@@ -7,6 +7,6 @@ return [
      * The time after which CookieWarning cookie expires
      */
     'cookie_warning' => [
-        'expire' => strtotime('+13 months')
+        'expire' => env('COOKIE_WARNING_EXPIRE', strtotime('+13 months'))
     ]
 ];
