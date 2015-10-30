@@ -1,5 +1,5 @@
 {
-    "name": "cakephp-fr/cookie-avertissement",
+    "name": "cakephp-fr/cookie-warning",
     "description": "CookieWarning plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {

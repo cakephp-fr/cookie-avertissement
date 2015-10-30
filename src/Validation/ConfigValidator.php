@@ -25,7 +25,7 @@ class ConfigValidator extends Validator
         $this->add('expire', [
             'numeric' => [
                 'rule' => ['numeric'],
-                'message' => __d('CookieWarning', 'Valeur non reconnue'),
+                'message' => __d('cookie_warning', 'Valeur non reconnue'),
             ]
         ]);
     }
