@@ -1,9 +1,9 @@
 <?php
 namespace CookieWarning\Controller;
 
-use Cake\Controller\Controller;
+use CookieWarning\Controller\AppController;
 
-class CookieWarningsController extends Controller
+class CookieWarningsController extends AppController
 {
 
     public function displayInfo()
@@ -13,6 +13,5 @@ class CookieWarningsController extends Controller
 
     public function displayDetail()
     {
-
     }
 }
