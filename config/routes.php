@@ -1,22 +1,13 @@
 <?php
 use Cake\Routing\Router;
 
-Router::plugin('CookieWarning', function ($routes) {
-    // $routes->extensions('html');
+Router::plugin('CookieWarning', ['path' => '/cookie'], function ($routes) {
     $routes->connect(
-        '/cookie-warning/display-info',
+        '/warnings/display-info',
         ['controller' => 'CookieWarnings', 'action' => 'displayInfo']
     );
     $routes->connect(
-        '/cookie-warning/display-detail',
-        ['controller' => 'CookieWarning', 'action' => 'displayDetail']
-    );
-    $routes->connect(
-        '/panels/view/*',
-        ['controller' => 'Panels', 'action' => 'view']
-    );
-    $routes->connect(
-        '/panels/*',
-        ['controller' => 'Panels', 'action' => 'index']
+        '/warnings/display-detail',
+        ['controller' => 'CookieWarnings', 'action' => 'displayDetail']
     );
 });

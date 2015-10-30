@@ -38,7 +38,7 @@ class CookieWarningFilter extends DispatcherFilter
             $response->cookie(['name' => 'cookie_advert',
                 'value' => $request->here(),
                 'expire' => $expire]);
-            $this->_inject_cookie_advert($response);
+            $this->_injectCookieAdvert($response);
         }
     }
 
@@ -46,7 +46,7 @@ class CookieWarningFilter extends DispatcherFilter
      * On injecte le script concernant l'avertissement sur le cookie
      * @param $response
      */
-    public function _inject_cookie_advert($response)
+    public function _injectCookieAdvert($response)
     {
         if (strpos($response->type(), 'html') === FALSE) {
             return;
@@ -56,7 +56,7 @@ class CookieWarningFilter extends DispatcherFilter
         if ($pos === FALSE) {
             return;
         }
-        $view = "<iframe src='" . Router::url('/cookie_warning/cookie_warnings/display_info') . "' style='width:100%;position:fixed;top:0;left: 0;z-index:9999' id='cookie_iframe'></iframe>";
+        $view = "<iframe src='" . Router::url('/cookie/warnings/display-info') . "' style='width:100%;position:fixed;top:0;left: 0;z-index:9999' id='cookie_iframe'></iframe>";
         $body = substr($body, 0, $pos) . $view . substr($body, $pos);
         $response->body($body);
     }
