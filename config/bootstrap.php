@@ -19,5 +19,3 @@ if (!empty($errors)) {
 
 $filter = new CookieAvertissementFilter();
 DispatcherFactory::add($filter, ['priority' => 9999]);
-
-?>

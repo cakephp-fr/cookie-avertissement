@@ -16,5 +16,3 @@ class CookieAvertissementsController extends Controller
     }
 
 }
-
-?>
