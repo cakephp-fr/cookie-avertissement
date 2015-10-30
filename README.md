@@ -1,4 +1,4 @@
-# CookieAvertissement plugin for CakePHP
+# CookieWarning plugin for CakePHP
 
 ## Installation
 

@@ -1,8 +1,8 @@
 <?php
-namespace CookieAvertissement\Controller;
+namespace CookieWarning\Controller;
 use Cake\Controller\Controller;
 
-class CookieAvertissementsController extends Controller
+class CookieWarningsController extends Controller
 {
 
     public function displayInfo()

@@ -1,6 +1,6 @@
 {
     "name": "cakephp-fr/cookie-avertissement",
-    "description": "CookieAvertissement plugin for CakePHP",
+    "description": "CookieWarning plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
         "php": ">=5.4.16",
@@ -11,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "CookieAvertissement\\": "src"
+            "CookieWarning\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CookieAvertissement\\Test\\": "tests",
+            "CookieWarning\\Test\\": "tests",
             "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
         }
     }

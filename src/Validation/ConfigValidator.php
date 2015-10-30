@@ -6,7 +6,7 @@
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link     http://blog.cake-websites.com/
  */
-namespace CookieAvertissement\Validation;
+namespace CookieWarning\Validation;
 
 use Cake\Validation\Validator;
 
@@ -25,7 +25,7 @@ class ConfigValidator extends Validator
         $this->add('expire', [
             'numeric' => [
                 'rule' => ['numeric'],
-                'message' => __d('CookieAvertissement', 'Valeur non reconnue'),
+                'message' => __d('CookieWarning', 'Valeur non reconnue'),
             ]
         ]);
     }

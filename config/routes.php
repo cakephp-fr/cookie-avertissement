@@ -1,6 +1,6 @@
 <?php
 use Cake\Routing\Router;
 
-Router::plugin('CookieAvertissement', function ($routes) {
+Router::plugin('CookieWarning', function ($routes) {
     $routes->fallbacks('DashedRoute');
 });

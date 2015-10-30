@@ -9,7 +9,7 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace CookieAvertissement\Routing\Filter;
+namespace CookieWarning\Routing\Filter;
 
 use Cake\Core\Configure;
 use Cake\Event\Event;
@@ -23,7 +23,7 @@ use Cake\Routing\Router;
  * and binds the correct events into the provided event
  * manager
  */
-class CookieAvertissementFilter extends DispatcherFilter
+class CookieWarningFilter extends DispatcherFilter
 {
     /**
      * Récupération de l'évenement response après traitement de la requête
