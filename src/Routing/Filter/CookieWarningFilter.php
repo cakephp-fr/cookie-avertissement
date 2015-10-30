@@ -34,12 +34,13 @@ class CookieWarningFilter extends DispatcherFilter
     {
         $request = $event->data['request'];
         $response = $event->data['response'];
-        debug($response);
         if (!$request->cookie('cookie_warning')) {
             $expire = Configure::read('cookie_warning.expire');
-            $response->cookie(['name' => 'cookie_warning',
+            $response->cookie([
+                'name' => 'cookie_warning',
                 'value' => $request->here(),
-                'expire' => $expire]);
+                'expire' => $expire
+            ]);
             $this->_injectCookieAdvert($response);
         }
     }
@@ -60,7 +61,7 @@ class CookieWarningFilter extends DispatcherFilter
         if ($pos === false) {
             return;
         }
-        $view = "<iframe src='" . Router::url('/cookie/warnings/display-info') . "' style='width:100%;position:fixed;top:0;left: 0;z-index:9999' id='cookie_iframe'></iframe>";
+        $view = "<iframe src='" . Router::url('/cookie_warning/cookie-warnings/display-info') . "' style='width:100%;position:fixed;top:0;left: 0;z-index:9999' id='cookie_iframe'></iframe>";
         $body = substr($body, 0, $pos) . $view . substr($body, $pos);
         $response->body($body);
     }
