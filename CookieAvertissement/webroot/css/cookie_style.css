@@ -1,0 +1,57 @@
+.block {
+    color: #005cff;
+    height:75px;
+    background-color: rgba(255,255,255,0.9);
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+a.boxclose{
+    float:right;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 5px;
+    background: #605F61;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 5px 5px;
+}
+
+#cookieBtn.btn-cookie {
+    text-shadow: 0 1px 0 #fff;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #ffffff;
+    background-color: #ff8f39;
+    border-color: #c45500;
+    text-decoration: none;
+}
+
+#cookieBtn.btn-cookie:hover {
+    color: #ff8f39;
+    background-color: #ac4b00;
+    border-color: #873b00;
+}
