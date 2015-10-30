@@ -9,7 +9,7 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace CookieAvertissement\Routing\Filter;
+namespace CookieWarning\Routing\Filter;
 
 use Cake\Core\Configure;
 use Cake\Event\Event;
@@ -23,7 +23,7 @@ use Cake\Routing\Router;
  * and binds the correct events into the provided event
  * manager
  */
-class CookieAvertissementFilter extends DispatcherFilter
+class CookieWarningFilter extends DispatcherFilter
 {
     /**
      * Récupération de l'évenement response après traitement de la requête
@@ -34,7 +34,7 @@ class CookieAvertissementFilter extends DispatcherFilter
         $request = $event->data['request'];
         $response = $event->data['response'];
         if (!$request->cookie('cookie_advert')) {
-            $expire = Configure::read('cookie_avertissement.expire');
+            $expire = Configure::read('cookie_warning.expire');
             $response->cookie(['name' => 'cookie_advert',
                 'value' => $request->here(),
                 'expire' => $expire]);
@@ -56,9 +56,8 @@ class CookieAvertissementFilter extends DispatcherFilter
         if ($pos === FALSE) {
             return;
         }
-        $view = "<iframe src='" . Router::url('/cookie_avertissement/cookie_avertissements/display_info') . "' style='width:100%;position:fixed;top:0;left: 0;z-index:9999' id='cookie_iframe'></iframe>";
+        $view = "<iframe src='" . Router::url('/cookie_warning/cookie_warnings/display_info') . "' style='width:100%;position:fixed;top:0;left: 0;z-index:9999' id='cookie_iframe'></iframe>";
         $body = substr($body, 0, $pos) . $view . substr($body, $pos);
         $response->body($body);
-
     }
 }

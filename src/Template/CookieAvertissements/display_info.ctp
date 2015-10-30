@@ -1,4 +1,4 @@
-<?= $this->Html->css('CookieAvertissement.cookie_style'); ?>
+<?= $this->Html->css('CookieWarning.cookie_style'); ?>
 <script>
     function closeIframe() {
         var iframe = document.getElementById('cookie_iframe');
