@@ -6,8 +6,6 @@ use Cake\Core\Plugin;
 use Cake\Datasource\ConnectionManager;
 use Cake\I18n\I18n;
 
-require_once 'vendor/autoload.php';
-
 // Path constants to a few helpful things.
 if (!defined('DS')) {
     define('DS', DIRECTORY_SEPARATOR);
@@ -25,7 +23,10 @@ define('TMP', sys_get_temp_dir() . DS);
 define('CONFIG', APP . 'config' . DS);
 define('CACHE', TMP);
 define('LOGS', TMP);
+
+require_once ROOT . 'vendor/autoload.php';
 require_once CORE_PATH . 'config/bootstrap.php';
+
 date_default_timezone_set('UTC');
 mb_internal_encoding('UTF-8');
 Configure::write('debug', true);
