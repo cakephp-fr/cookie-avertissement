@@ -1,5 +1,11 @@
 # CookieWarning plugin for CakePHP
 
+[![Build Status](https://api.travis-ci.org/cakephp-fr/cookie-warning.png?branch=master)](https://travis-ci.org/cakephp-fr/cookie-warning)
+[![Latest Stable Version](https://poser.pugx.org/cakephp-fr/cookie-warning/v/stable.png)](https://packagist.org/packages/cakephp-fr/cookie-warning)
+[![Minimum PHP Version](http://img.shields.io/badge/php-%3E%3D%205.4-8892BF.svg)](https://php.net/)
+[![License](https://poser.pugx.org/cakephp-fr/cookie-warning/license.png)](https://packagist.org/packages/cakephp-fr/cookie-warning)
+[![Total Downloads](https://poser.pugx.org/cakephp-fr/cookie-warning/d/total.png)](https://packagist.org/packages/cakephp-fr/cookie-warning)
+
 ## Installation
 
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
