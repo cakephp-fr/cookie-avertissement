@@ -10,6 +10,16 @@ The recommended way to install composer packages is:
 composer require cakephp-fr/cookie-warning
 ```
 
+Then, enable the plugin in your `config/bootstrap.php` file:
+
+Plugin::load('CookieWarning', ['routes' => true, 'bootstrap' => true]);
+
+Finally add a `cookie_warning.php` file in `/config` of your app. This is where you'll be able to configure the plugin. There is a template example for this `cookie_warning.php` in the `/config` folder of the plugin.
+
+## Usage
+
+
+
 ## License
 
 The MIT License (MIT)

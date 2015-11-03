@@ -1,18 +1,26 @@
 <?php
 namespace CookieWarning\Controller;
 
-use Cake\Controller\Controller;
+use CookieWarning\Controller\AppController;
 
-class CookieWarningsController extends Controller
+class CookieWarningsController extends AppController
 {
-
+    /**
+     * Display Info
+     *
+     * @return void
+     */
     public function displayInfo()
     {
-        $this->viewBuilder()->layout(FALSE);
+        $this->viewBuilder()->layout(false);
     }
 
+    /**
+     * Display Detail
+     *
+     * @return void
+     */
     public function displayDetail()
     {
-
     }
 }

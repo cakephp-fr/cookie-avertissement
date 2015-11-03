@@ -6,7 +6,7 @@ use CookieWarning\Routing\Filter\CookieWarningFilter;
 use CookieWarning\Validation\ConfigValidator;
 use Cake\Core\Configure\Engine\PhpConfig;
 
-Configure::config('default', new PhpConfig(dirname(APP) . DS . 'config' . DS));
+Configure::config('default', new PhpConfig(CONFIG));
 Configure::load('cookie_warning', 'default', false);
 
 // Validate the Configure Data
@@ -17,5 +17,5 @@ if (!empty($errors)) {
     throw new \Exception(__d('cookie_warning', 'Délai d\'expiration du cookie incorrect'));
 }
 
-$filter = new CookieWarningFilter();
-DispatcherFactory::add($filter, ['priority' => 9999]);
+$filter = new CookieWarningFilter(['priority' => 9999]);
+DispatcherFactory::add($filter);
