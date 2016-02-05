@@ -4,14 +4,15 @@ use Cake\Core\Configure;
 use Cake\Routing\DispatcherFactory;
 use CookieWarning\Routing\Filter\CookieWarningFilter;
 use CookieWarning\Validation\ConfigValidator;
-use Cake\Core\Configure\Engine\PhpConfig;
 
-Configure::config('default', new PhpConfig(CONFIG));
-Configure::load('cookie_warning', 'default', false);
+$config = Configure::read('CookieWarning');
+if ($config == null) {
+    throw new \Exception(__d('cookie_warning', 'Please add a configuration for the CookieWarning plugin in the app.php file (see readme in plugin folder)'));
+}
 
 // Validate the Configure Data
 $validator = new ConfigValidator();
-$errors = $validator->errors(Configure::read('cookie_warning'));
+$errors = $validator->errors($config);
 
 if (!empty($errors)) {
     throw new \Exception(__d('cookie_warning', 'Délai d\'expiration du cookie incorrect'));

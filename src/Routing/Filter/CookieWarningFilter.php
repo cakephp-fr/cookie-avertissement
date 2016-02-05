@@ -35,7 +35,7 @@ class CookieWarningFilter extends DispatcherFilter
         $request = $event->data['request'];
         $response = $event->data['response'];
         if (!$request->cookie('cookie_warning')) {
-            $expire = Configure::read('cookie_warning.expire');
+            $expire = Configure::read('CookieWarning.expire');
             $response->cookie([
                 'name' => 'cookie_warning',
                 'value' => $request->here(),

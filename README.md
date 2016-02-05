@@ -12,25 +12,40 @@ You can install this plugin into your CakePHP application using [composer](http:
 
 The recommended way to install composer packages is:
 
-```
+```bash
 composer require cakephp-fr/cookie-warning
 ```
 
 Then, enable the plugin in your `config/bootstrap.php` file:
 
-    Plugin::load('CookieWarning', ['routes' => true, 'bootstrap' => true]);
+```bash
+bin/cake plugin load -rb Recaptcha
+```
 
-Finally add a `cookie_warning.php` file in `/config` of your app. This is where you'll be able to configure the plugin. There is a template example for this `cookie_warning.php` in the `/config` folder of the plugin.
+You can check that this command has created the line Plugin::load('Recaptcha', ['routes' => true, 'bootstrap' => true]); at the bottom of your config/boostrap.php file.
+
+Add a config for the plugin in your `config/app.php`:
+
+```php
+return [
+    //other configs before ...
+    /**
+     * The time after which CookieWarning cookie expires
+     */
+    'CookieWarning' => [
+        'expire' => env('COOKIE_WARNING_EXPIRE', strtotime('+13 months'))
+    ]
+];
+```
 
 ## Usage
-
 
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 <copyright holders>
+Copyright (c) 2015-2016 <cakephp-fr Contributors>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
